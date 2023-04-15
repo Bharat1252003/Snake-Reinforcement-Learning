@@ -1,0 +1,15 @@
+After 300 games record was 64 averaging around 24. ~1hr
+
+The low scores were often due to the snake running into itself. Probably cause the model causes the snake to go to the food block as soon as possible thus running into itself. Another test case where it stopped early was due to it curling into itself. Not sure how to fix it but the model likely learnt a specific direction to go when faced with a certain kind of situation or random chance. Initial training had a lot of times where the snake just kept looping. This is most likely due to the lack of having a small negative reward for not collecting food however this was overcome quickly after some training.
+
+Hyperparameters:
+epsilon = 100-n_games; randint(0,200)7<epsilon
+gamma = 0.9
+lr = 0.001
+MAX_MEMORY  = 100_000
+BATCH_SIZE = 1000
+
+model: 11 inputs, 256 hidden units, 3 outputs
+
+
+higher speeds were used to speed up training
